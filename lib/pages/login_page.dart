@@ -21,25 +21,57 @@ class LoginPage extends StatelessWidget {
                   spreadRadius: 1,
                 )
               ]),
-              child: ListView(
-                children: <Widget>[
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Column(
-                        children: <Widget>[
-                          Text(
-                            'Bem-Vindo!!',
-                            style: TextStyle(
-                                fontSize: 30, fontWeight: FontWeight.w500),
-                          ),
-                          Text('Faça Login para continuar'),
-                        ],
+              child: Padding(
+                padding: EdgeInsets.all(15),
+                child: ListView(
+                  children: <Widget>[
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Column(
+                          children: <Widget>[
+                            Text(
+                              'Bem-Vindo!!',
+                              style: TextStyle(
+                                  fontSize: 30, fontWeight: FontWeight.w500),
+                            ),
+                            Text('Faça Login para continuar'),
+                          ],
+                        ),
+                        FlatButton(onPressed: () {}, child: Text('Teste')),
+                      ],
+                    ),
+                    TextFormField(
+                      autofocus: true,
+                      keyboardType: TextInputType.emailAddress,
+                      decoration: InputDecoration(
+                          labelText: "Email",
+                          labelStyle: TextStyle(
+                            color: Theme.of(context).primaryColor,
+                            fontWeight: FontWeight.w400,
+                            fontSize: 16,
+                          )),
+                      style: TextStyle(
+                        fontSize: 20,
                       ),
-                      FlatButton(onPressed: () {}, child: Text('Teste')),
-                    ],
-                  ),
-                ],
+                    ),
+                    TextFormField(
+                      autofocus: true,
+                      keyboardType: TextInputType.text,
+                      obscureText: true,
+                      decoration: InputDecoration(
+                          labelText: "Senha",
+                          labelStyle: TextStyle(
+                            color: Theme.of(context).primaryColor,
+                            fontWeight: FontWeight.w400,
+                            fontSize: 16,
+                          )),
+                      style: TextStyle(
+                        fontSize: 20,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
