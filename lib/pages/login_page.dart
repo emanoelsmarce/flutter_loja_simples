@@ -21,12 +21,26 @@ class LoginPage extends StatelessWidget {
                   spreadRadius: 1,
                 )
               ]),
-              child: ListView(children: <Widget>[
-                Text('Bem-Vindo!!',
-                    style:
-                        TextStyle(fontSize: 30, fontWeight: FontWeight.w500)),
-                Text('Faça login para continuar')
-              ]),
+              child: ListView(
+                children: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Column(
+                        children: <Widget>[
+                          Text(
+                            'Bem-Vindo!!',
+                            style: TextStyle(
+                                fontSize: 30, fontWeight: FontWeight.w500),
+                          ),
+                          Text('Faça Login para continuar'),
+                        ],
+                      ),
+                      FlatButton(onPressed: () {}, child: Text('Teste')),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ],
         ),
